@@ -1,6 +1,5 @@
 // Client to Server Socket Connection
-const PORT = 3000;
-const socket = io.connect(`http://localhost:${PORT}`);
+const socket = io.connect(`https://socketio-web-chat-app.herokuapp.com/`);
 
 // DOM Elements
 const outputDiv = document.getElementById("output");
@@ -52,12 +51,10 @@ messageInput.addEventListener("keyup", () => {
 
 // Socket Listener
 socket.on("chat", (data) => {
-    console.log(socket.id)
     if(!data.isTyping) {
         feedbackDiv.innerHTML = "";
     }
     outputDiv.innerHTML += `<p><strong>${data.handle}:</strong>${data.message}</p>`;
-    console.log("Client Side Received Data", data);
 });
 
 // Typing Listener

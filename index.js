@@ -7,7 +7,7 @@ const app = express()
 app.use(express.static('public'))
 
 // Morgan
-app.use(morgan('dev'))
+app.use(morgan('common'))
 
 // Server
 const port = process.env.PORT || 3000
@@ -21,12 +21,8 @@ const server = app.listen(port, () => {
 const io = socket(server)
 
 io.on('connection', (socket) => {
-    // console.log(`Socket Connected: ${socket.id}`)
-    console.log("Connected")
     // Chat Listener
     socket.on('chat', (data) => {
-        console.log(socket.id)
-        console.log("Server Side Received Data:", data)
         io.sockets.emit('chat', data)
     })
 
