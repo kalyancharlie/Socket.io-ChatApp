@@ -1,0 +1,28 @@
+{
+  "name": "Socket.io-ChatApp",
+  "version": "1.0.0",
+  "description": "Realtime Chat App using Socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalyancharlie/Socket.io-ChatApp.git"
+  },
+  "keywords": [],
+  "author": "Kalyan Chinna Bathula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalyancharlie/Socket.io-ChatApp/issues"
+  },
+  "homepage": "https://github.com/kalyancharlie/Socket.io-ChatApp#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
