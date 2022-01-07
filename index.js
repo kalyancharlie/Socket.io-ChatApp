@@ -19,7 +19,12 @@ const server = app.listen(port, () => {
 })
 
 // Socket.io Setup
-const io = socket(server)
+const io = socket(server, {
+    cors: {
+        origin: '*',
+        methods: ['GET', 'POST']
+    }
+})
 
 io.on('connection', (socket) => {
     count += 1
