@@ -10,20 +10,52 @@
             integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
             crossorigin="anonymous"
         ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./styles.css" />
         <title>Chat App</title>
     </head>
     <body>
-        <div id="mario-chat">
-            <h2>Group Chat</h2>
-            <div id="chat-window">
-                <div id="output"></div>
-                <div id="feedback"></div>
+        <div class="chat-window-wrapper">
+            <div class="chat-window-header">
+                <div class="app-heading-text">
+                    <input type="text" class="handle-name-input" id="handle_input" placeholder="Enter you name">
+                </div>
+                <div class="app-status-div">
+                    <div class="typing-info">
+                        <p class="typing-info-text" id="feedback"></p>
+                    </div>
+                    <div class="users-info">
+                        <p class="users-info-text">
+                            <span id="users_count" class="user-count">0 </span> User(s) Online
+                        </p>
+                    </div>
+                </div>
             </div>
-            <input id="handle" type="text" placeholder="Handle" />
-            <input id="message" type="text" placeholder="Message" />
-            <button id="send">Send</button>
+            <div class="chat-window-body" id="chats_div">
+                <div id="chat_outputs" class="chat-window-chats"></div>
+            </div>
+            <div class="chat-window-footer">
+                <input id="message_input" class="message-input" type="text" placeholder="Enter your message" />
+                <button id="send_btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
         </div>
+
+        <footer>
+            <p>Designed &amp; Developed by <a href="https://www.linkedin.com/in/kalyancharlie/" target="_blank">Kalyan Chinna Bathula</a></p>
+            <p class="social-icons">
+                <span class="social-icon"><a href="https://www.instagram.com/kalyan_batthula/" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span class="social-icon"><a href="https://www.linkedin.com/in/kalyancharlie/" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+            </p>
+        </footer>
         <script defer src="./chat.js"></script>
     </body>
 </html>

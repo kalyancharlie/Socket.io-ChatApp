@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/kalyancharlie/Socket.io-ChatApp.git"
   },
-  "keywords": [],
+  "keywords": ["Chat", "Socket.io", "Node.js"],
   "author": "Kalyan Chinna Bathula",
   "license": "ISC",
   "bugs": {
